@@ -1,0 +1,7 @@
+.sanancorp{
+    transition: all 3s;
+}
+
+.sanancorp:hover{
+    color: brown;
+}

@@ -1,0 +1,19 @@
+<ul class="list-group text-center">
+  {% if user.is_authenticated %}
+    <li class="list-group-item">
+      <b>Welcome {{user.username}}</b><br>
+      <a href="{% url 'logout' %}"><b>Logout</b></a>
+
+    </li>
+  {% else %}
+    <li class="list-group-item">
+      <a href="{% url 'login' %}">Login</a>
+      <a href="{% url 'signuppage' %}">Sign UP</a>
+    </li>
+  {% endif %}
+    <li class="list-group-item" aria-current="true">
+      <a href="{% url 'createpage' %}">Create Post</a>
+    </li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>

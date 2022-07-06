@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for x in object_list %}
+        <h3 class="text-center text-warning">
+            <a href="{% url 'detailpage' x.pk %}">  {{x.title}}</a>
+        </h3>
+        <h6 class="text-center text-warning">{{x.body}}</h6>
+        <hr>
+    {% endfor %}
+{% endblock %}
